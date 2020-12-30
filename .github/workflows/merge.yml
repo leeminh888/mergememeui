@@ -107,13 +107,11 @@ jobs:
          run: |
               sudo zip memeha.zip system.img
               expect -c "
-              spawn sftp ruiii@frs.sourceforge.net
-              expect \"yes/no\"
-              send \"yes\r\"
+              spawn sftp ${{ secrets.SFUSER }}@frs.sourceforge.net        
               expect \"Password\"
               send \"${{ secrets.PASSWORD }}\r\"
               expect \"sftp> \"
-              send \"cd /home/pfs/project/rui-ports/dumps\r\"
+              send \"cd ${{ secrets.SFDIR }}\r\"
               set timeout -1
               send \"put memeha.zip\r\"
               expect \"Uploading\"
