@@ -91,10 +91,10 @@ jobs:
               sudo rm -rf system system.img product product.img system_ext system_ext.img
               ls
               sudo mv system_new.img system.img
+              sudo zip -r vos4.zip system.img
               
        - name: upload ab n info
          run: |
-              sudo zip vos4.zip system.img
               expect -c "
               spawn sftp ${{ secrets.SFUSER }}@frs.sourceforge.net 
               expect \"yes/no\"
