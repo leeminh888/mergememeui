@@ -107,7 +107,9 @@ jobs:
          run: |
               sudo zip vos4.zip system.img
               expect -c "
-              spawn sftp ${{ secrets.SFUSER }}@frs.sourceforge.net        
+              spawn sftp ${{ secrets.SFUSER }}@frs.sourceforge.net 
+              expect \"yes/no\"
+              send \"yes\r\"       
               expect \"Password\"
               send \"${{ secrets.PASSWORD }}\r\"
               expect \"sftp> \"
