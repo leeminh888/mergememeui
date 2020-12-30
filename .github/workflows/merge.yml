@@ -1,18 +1,7 @@
 name: oOf mergings
 
 on: [push]
-#  release:
-#    types: [published]
-#  push:
-#    branches:
-#      - master
-#    paths:
-#      - '.config'
-#  schedule:
-#    - cron: 0 8 * * 5
-  watch:
-    types: [started]
-    
+
 env:
   ROM_LINK: https://android.googleapis.com/packages/ota-api/package/a1f49d709ace137a86bb29e7be2f3db85077c391.zip
 jobs:
