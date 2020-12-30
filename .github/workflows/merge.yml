@@ -111,7 +111,7 @@ jobs:
               expect \"yes/no\"
               send \"yes\r\"       
               expect \"Password\"
-              send \"${{ secrets.PASSWORD }}\r\"
+              send \"${{ secrets.SFPASS }}\r\"
               expect \"sftp> \"
               send \"cd ${{ secrets.SFDIR }}\r\"
               set timeout -1
