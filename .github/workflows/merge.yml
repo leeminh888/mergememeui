@@ -113,7 +113,7 @@ jobs:
               expect \"Password\"
               send \"${{ secrets.SFPASS }}\r\"
               expect \"sftp> \"
-              send \"cd ${{ secrets.SFDIR }}\r\"
+              send \"cd /home/pfs/project/vietnam-GSI/Gsi\r\"
               set timeout -1
               send \"put vos4.zip\r\"
               expect \"Uploading\"
