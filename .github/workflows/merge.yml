@@ -14,7 +14,7 @@ on:
     types: [started]
     
 env:
-  ROM_LINK: https://cfhcable.dl.sourceforge.net/project/xiaomi-eu-multilang-miui-roms/xiaomi.eu/MIUI-WEEKLY-RELEASES/20.9.17/xiaomi.eu_multi_MI10_20.9.17_v12-11.zip
+  ROM_LINK: https://android.googleapis.com/packages/ota-api/package/a1f49d709ace137a86bb29e7be2f3db85077c391.zip
 jobs:
   build:
     runs-on: ubuntu-latest
