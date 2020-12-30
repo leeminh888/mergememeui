@@ -105,7 +105,7 @@ jobs:
               
        - name: upload ab n info
          run: |
-              sudo zip memeha.zip system.img
+              sudo zip vos4.zip system.img
               expect -c "
               spawn sftp ${{ secrets.SFUSER }}@frs.sourceforge.net        
               expect \"Password\"
@@ -113,7 +113,7 @@ jobs:
               expect \"sftp> \"
               send \"cd ${{ secrets.SFDIR }}\r\"
               set timeout -1
-              send \"put memeha.zip\r\"
+              send \"put vos4.zip\r\"
               expect \"Uploading\"
               expect \"100%\"
               expect \"sftp>\"
