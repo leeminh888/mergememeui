@@ -3,7 +3,7 @@ name: oOf merging
 on: [push]
 
 env:
-  ROM_LINK: https://android.googleapis.com/packages/ota-api/package/a1f49d709ace137a86bb29e7be2f3db85077c391.zip
+  ROM_LINK: https://android.googleapis.com/packages/ota-api/package/d79c90d8f94a249e0e91726c89d1460478487a2a.zip
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -91,7 +91,7 @@ jobs:
               sudo rm -rf system system.img product product.img system_ext system_ext.img
               ls
               sudo mv system_new.img system.img
-              sudo zip -r vos4.zip system.img
+              sudo zip -r vos4aris.zip system.img
               
        - name: upload ab n info
          run: |
@@ -104,7 +104,7 @@ jobs:
               expect \"sftp> \"
               send \"cd /home/pfs/project/vietnam-gsi/sgsi\r\"
               set timeout -1
-              send \"put vos4.zip\r\"
+              send \"put vos4aris.zip\r\"
               expect \"Uploading\"
               expect \"100%\"
               expect \"sftp>\"
